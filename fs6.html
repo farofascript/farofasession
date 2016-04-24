@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>FarofaScript</title>
+        <style>
+            div {
+                width: 150px;
+                height: 150px;
+                border: 1px solid #bbbbbb;
+                background-color: #ececec;
+                margin: 10px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            div:hover{
+                cursor: pointer;
+                background-color: #e0e0e0;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            // Alterando a declaração da variável i de var para let resolver
+            // o problema da atribuição incorreta do valor de i.
+            for (let i = 1; i <= 3; i++) {
+              var div = document.createElement("div");
+              div.innerHTML = i;
+
+              div.onclick = function (ev) {
+                console.log("Item " + i + " clicado.");
+              };
+
+              document.body.appendChild(div);
+            }
+        </script>
+    </body>
+</html>
